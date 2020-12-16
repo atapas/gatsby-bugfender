@@ -4,11 +4,22 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import { Bugfender } from '@bugfender/sdk'
 
-Bugfender.init({
-  appKey: 'VocUSyztliDe9H98ZowwQEoOfqObXfRR',
-});
+import GatsbyBugfender from '../utils/bugfender'
+
+GatsbyBugfender.init()
+
+GatsbyBugfender.log('C', 'D', 'E')
+
+GatsbyBugfender.log('One Value')
+
+GatsbyBugfender.warn('Warning')
+
+GatsbyBugfender.error('Error')
+
+GatsbyBugfender.sendUserFeedback('So Good', 'I loved the app')
+
+GatsbyBugfender.sendIssue('Some Issue', 'A Big Issue');
 
 const IndexPage = () => (
   <Layout>
