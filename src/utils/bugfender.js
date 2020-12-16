@@ -44,7 +44,15 @@ const GatsbyBugfender = {
             return
         }
         Bugfender.sendIssue(key, value)
+    },
+
+    sendCrash: (key, value) => {
+        if (!isBrowser) {
+            return
+        }
+        Bugfender.sendCrash(key, value)
     }
+
 }
 
 export default GatsbyBugfender;
