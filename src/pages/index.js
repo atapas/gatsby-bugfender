@@ -1,27 +1,40 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import { Bugfender } from '@bugfender/sdk'
+import { graphql } from "gatsby"
 
-Bugfender.init({
-  appKey: 'VocUSyztliDe9H98ZowwQEoOfqObXfRR',
-});
+import PostList from '../components/PostList'
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <SEO title="All Posts" />
+    <PostList data={data} />
   </Layout>
 )
 
 export default IndexPage
+
+export const GET_ALL_POSTS = graphql`
+  {
+    allMarkdownRemark (
+      sort: { fields: [frontmatter___date], order: DESC }
+      ){
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            tags
+            date(formatString: "DD MMMM, YYYY")
+            author
+          }
+          html
+          excerpt
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`
