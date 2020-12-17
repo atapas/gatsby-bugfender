@@ -7,10 +7,10 @@ const Post = props => (
   <div>
     <Link 
         to={props.details.fields.slug}
-        style={{textDecoration: 'none', color: '#000000',fontWeight: '600', fontSize: '25px'}}>
+        style={{textDecoration: 'none', color: '#960798',fontWeight: '600', fontSize: '25px'}}>
         {props.details.frontmatter.title}
     </Link>
-    <div>
+    <div style={{padding: '3px'}}>
       <User color='purple' size={16} />{' '}<span>{props.details.frontmatter.author}</span>
       {", "}
       <span>on {props.details.frontmatter.date}</span>

@@ -10,7 +10,7 @@
   }
   
   .tag {
-    background: rgb(161, 6, 161);
+    background: rgb(230, 92, 230);
     border-radius: 3px 0 0 3px;
     color: rgb(255, 255, 255);
     display: inline-block;
@@ -37,7 +37,7 @@
   .tag::after {
     background: #fff;
     border-bottom: 13px solid transparent;
-    border-left: 10px solid rgb(161, 6, 161);
+    border-left: 10px solid rgb(230, 92, 230);
     border-top: 13px solid transparent;
     content: '';
     position: absolute;

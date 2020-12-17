@@ -6,6 +6,8 @@ tags:
   - programming
 author: Scott Samuel
 ---
+> Taken from [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects) to dmonstrate an example.
+
 # Objects overview
 Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life. The concept of objects in JavaScript can be understood with real life, tangible objects.
 
@@ -45,5 +47,3 @@ myCar['make'] = 'Ford';
 myCar['model'] = 'Mustang';
 myCar['year'] = 1969;
 ```
-
-Taken from [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects) to dmonstrate example.

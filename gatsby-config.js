@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Happy Blog`,
+    title: `The Purple Blog`,
     description: `Bring Gatsby and Bugfender together.`,
     author: `@tapasadhikary`,
   },
