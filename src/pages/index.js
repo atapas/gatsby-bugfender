@@ -3,7 +3,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 
+import GatsbyBugfender from '../utils/bugfender'
+
 import PostList from '../components/PostList'
+
+GatsbyBugfender.init({
+  appKey: 'VocUSyztliDe9H98ZowwQEoOfqObXfRR',
+});
 
 const IndexPage = ({data}) => (
   <Layout>
