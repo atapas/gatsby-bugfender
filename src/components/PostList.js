@@ -3,6 +3,8 @@ import TagCapsules from "./TagCapsules"
 import { Link } from "gatsby"
 import { User } from 'react-feather'
 
+import GatsbyBugfender from '../utils/bugfender'
+
 const Post = props => (
   <div>
     <Link 
@@ -22,6 +24,12 @@ const Post = props => (
 
 export default (props) => {
   let posts = props.data.allMarkdownRemark.edges
+  if (posts.length > 0) {
+    GatsbyBugfender.log(`${posts.length} posts found in the repository`)
+    GatsbyBugfender.sendUserFeedback('Posts created', 'Default Posts created Successfully!')
+  } else {
+    GatsbyBugfender.sendIssue('No Posts Found')
+  }
   return (
     <div>
       {posts.map((post, index) => (

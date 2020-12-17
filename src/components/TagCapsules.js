@@ -2,10 +2,13 @@ import React from "react"
 import _ from "lodash"
 import { Link } from "gatsby"
 
+import GatsbyBugfender from '../utils/bugfender'
+
 import styles from "./TagCapsules.module.css"
 
 const Tag = props => {
   const tag = props.tag
+  GatsbyBugfender.log(`Recieved Tag ${tag}`)
 
   return (
     <li>
@@ -18,7 +21,7 @@ const Tag = props => {
 
 const Tagcapsules = props => {
   const tags = props.tags
-  console.log(tags)
+  GatsbyBugfender.log(`Recieved ${tags.length} tags`)
   return (
     <ul className={styles.tags}>
       {tags && tags.map(tag => <Tag tag={tag} key={tag} />)}
