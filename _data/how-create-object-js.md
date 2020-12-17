@@ -1,8 +1,6 @@
 ---
 date: 2020-08-20
 title: What is Object in JavaScript?
-category:
-  name: Technology
 tags:
   - javascript
   - programming

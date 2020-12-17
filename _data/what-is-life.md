@@ -1,8 +1,6 @@
 ---
 date: 2020-05-18
 title: What is Life?
-category:
-  name: Social
 tags:
   - soft-skill
   - spirituality
